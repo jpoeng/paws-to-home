@@ -24,6 +24,14 @@ $(document).on('click', '[data-toggle="lightbox"]', function(event) {
 });
 
 /**
+ * Lozad JS
+ * Description: lazy loads elements performantly
+ * Source: https://github.com/ApoorvSaxena/lozad.js
+ */
+const observer = lozad();
+observer.observe();
+
+/**
  * Image Gallery of Adorable Dogs <3
  * 1. Load local json file
  * 2. Build image gallery
@@ -68,9 +76,9 @@ function buildGallery() {
             setAttributes(image, {
                 'height': height,
                 'width': width,
-                'src': imageUrl
+                'data-src': imageUrl
             });
-            image.classList.add('image');
+            image.classList.add('image', 'lozad');
             imageContainer.appendChild(image);
 
             var textOverlay = document.createElement('div');
@@ -84,6 +92,9 @@ function buildGallery() {
             // Add image to gallery
             gallery.appendChild(imageContainer);
         }
+
+        // Observe newly added elements for lazy loading
+        observer.observe();
     });
 }
 
