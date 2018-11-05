@@ -47,7 +47,7 @@ function buildGallery() {
 
         for (var i = dogList.length - 1; i >= 0; i--) {
             var dog = dogList[i];
-            var imageUrl = dog.image;
+            var imageUrl = dog.imageCompressed;
             var imageUrlSource = dog.source;
 
             // Calculate random image sizes

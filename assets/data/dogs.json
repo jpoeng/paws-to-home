@@ -2,76 +2,91 @@
     "dogs": [
         {
             "name": "Lassi",
+            "imageCompressed": "/assets/images/compressed/1.jpeg",
             "image": "/assets/images/raw/1.jpeg",
             "source": "https://unsplash.com/photos/ybHtKz5He9Y"
         },
         {
             "name": "Roxy",
+            "imageCompressed": "/assets/images/compressed/2.jpeg",
             "image": "/assets/images/raw/2.jpeg",
             "source": "https://unsplash.com/photos/rY79kwEEyGo"
         },
         {
             "name": "Buster",
+            "imageCompressed": "/assets/images/compressed/3.jpeg",
             "image": "/assets/images/raw/3.jpeg",
             "source": "https://unsplash.com/photos/ngqyo2AYYnE"
         },
         {
             "name": "Chloe",
+            "imageCompressed": "/assets/images/compressed/4.jpeg",
             "image": "/assets/images/raw/4.jpeg",
             "source": "https://unsplash.com/photos/9A64wd1QaAU"
         },
         {
             "name": "Sadie",
+            "imageCompressed": "/assets/images/compressed/5.jpeg",
             "image": "/assets/images/raw/5.jpeg",
             "source": "https://unsplash.com/photos/915UJQaxtrk"
         },
         {
             "name": "Ariel",
+            "imageCompressed": "/assets/images/compressed/6.jpeg",
             "image": "/assets/images/raw/6.jpeg",
             "source": "https://unsplash.com/photos/mx0DEnfYxic"
         },
         {
             "name": "Jonah",
+            "imageCompressed": "/assets/images/compressed/7.jpeg",
             "image": "/assets/images/raw/7.jpeg",
             "source": "https://unsplash.com/photos/OsOQhAzcEKc"
         },
         {
             "name": "Bella",
+            "imageCompressed": "/assets/images/compressed/8.jpeg",
             "image": "/assets/images/raw/8.jpeg",
             "source": "https://unsplash.com/photos/6WneSv56YVI"
         },
         {
             "name": "Zoey",
+            "imageCompressed": "/assets/images/compressed/9.jpeg",
             "image": "/assets/images/raw/9.jpeg",
             "source": "https://unsplash.com/photos/CdVG9f96kyg"
         },
         {
             "name": "Ezra",
+            "imageCompressed": "/assets/images/compressed/10.jpeg",
             "image": "/assets/images/raw/10.jpeg",
             "source": "https://unsplash.com/photos/bVA2DI7c9e8"
         },
         {
             "name": "Stella",
+            "imageCompressed": "/assets/images/compressed/11.jpeg",
             "image": "/assets/images/raw/11.jpeg",
             "source": "https://unsplash.com/photos/GvhSUEN-Lm8"
         },
         {
             "name": "Major",
+            "imageCompressed": "/assets/images/compressed/12.jpeg",
             "image": "/assets/images/raw/12.jpeg",
             "source": "https://unsplash.com/photos/t2XHKIdc4Kw"
         },
         {
             "name": "Coco",
+            "imageCompressed": "/assets/images/compressed/13.jpeg",
             "image": "/assets/images/raw/13.jpeg",
             "source": "https://unsplash.com/photos/saRU3vzmgkY"
         },
         {
             "name": "Stormi",
+            "imageCompressed": "/assets/images/compressed/14.jpeg",
             "image": "/assets/images/raw/14.jpeg",
             "source": "https://unsplash.com/photos/1z-kI6gIEpg"
         },
         {
             "name": "Flash",
+            "imageCompressed": "/assets/images/compressed/15.jpeg",
             "image": "/assets/images/raw/15.jpeg",
             "source": "https://unsplash.com/photos/zHZ2nTnBnAQ"
         }
