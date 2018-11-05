@@ -125,3 +125,34 @@ a {
         width: 100% !important;
     }
 }
+
+/* Lightbox Modal */
+.modal-content {
+    background: none;
+    border: none;
+
+    .modal-header {
+        border: none;
+        display: block !important;
+        padding: 0;
+
+        .modal-title {
+            display: none;
+        }
+
+        .close {
+            color: #fff;
+            font-weight: 200;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            z-index: 1;
+        }
+    }
+
+    .modal-footer {
+        border: none;
+        color: #fff;
+        padding: 0 16px;
+    }
+}

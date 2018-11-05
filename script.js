@@ -51,12 +51,11 @@ function buildGallery() {
     loadJSON(function(response) {
         var data = JSON.parse(response);
         var dogList = data.dogs;
-        var gallery = document.getElementById('gallery');
 
         for (var i = dogList.length - 1; i >= 0; i--) {
             var dog = dogList[i];
+            var dogName = dog.name;
             var imageUrl = dog.imageCompressed;
-            var imageUrlSource = dog.source;
 
             // Calculate random image sizes
             var width = getRandomSize(200, 400);
@@ -68,7 +67,7 @@ function buildGallery() {
             setAttributes(imageContainer, {
                 'data-toggle': 'lightbox',
                 'data-type': 'image',
-                'data-footer': 'source: <a href="' + imageUrlSource + '">' + imageUrlSource + '</a>',
+                'data-footer': dogName,
                 'href': imageUrl
             });
 
@@ -85,12 +84,12 @@ function buildGallery() {
             textOverlay.classList.add('text-container');
             var text = document.createElement('div');
             text.classList.add('text');
-            text.textContent = dog.name;
+            text.textContent = dogName;
             textOverlay.appendChild(text);
             imageContainer.appendChild(textOverlay);
 
             // Add image to gallery
-            gallery.appendChild(imageContainer);
+            document.getElementById('gallery').appendChild(imageContainer);
         }
 
         // Observe newly added elements for lazy loading
