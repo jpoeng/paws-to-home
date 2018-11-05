@@ -28,10 +28,20 @@ $(document).on('click', '[data-toggle="lightbox"]', function(event) {
  * 1. Load local json file
  * 2. Build image gallery
  */
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var data = JSON.parse(this.responseText);
+function loadJSON(callback) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            callback(this.responseText);
+        }
+    };
+    xmlhttp.open('GET', 'assets/data/dogs.json', true);
+    xmlhttp.send();
+}
+
+function buildGallery() {
+    loadJSON(function(response) {
+        var data = JSON.parse(response);
         var dogList = data.dogs;
         var gallery = document.getElementById('gallery');
 
@@ -74,7 +84,7 @@ xmlhttp.onreadystatechange = function() {
             // Add image to gallery
             gallery.appendChild(imageContainer);
         }
-    }
-};
-xmlhttp.open('GET', 'assets/data/dogs.json', true);
-xmlhttp.send();
+    });
+}
+
+buildGallery();
