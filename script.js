@@ -1,11 +1,16 @@
 /**
  * Helper functions
  * 1. setAttribute()
+ * 2. getRandomSize()
  */
 function setAttributes(el, attrs) {
     for(var key in attrs) {
         el.setAttribute(key, attrs[key]);
     }
+}
+
+function getRandomSize(min, max) {
+  return Math.round(Math.random() * (max - min) + min);
 }
 
 /**
@@ -29,25 +34,38 @@ function buildGallery() {
         if (this.readyState == 4 && this.status == 200) {
             var data = JSON.parse(this.responseText);
             var dogList = data.dogs;
+            var gallery = document.getElementById('gallery');
 
             for (var i = dogList.length - 1; i >= 0; i--) {
-                var imgUrl = dogList[i].image;
-                var imgUrlSource = dogList[i].source;
+                var dog = dogList[i];
+                var imageUrl = dog.image;
+                var imageUrlSource = dog.source;
 
+                // Calculate random image sizes
+                var width = getRandomSize(200, 400);
+                var height =  getRandomSize(200, 400);
+
+                // Build image element
                 var imageContainer = document.createElement('a');
-                imageContainer.classList.add('dog', 'col-xs-12', 'col-sm-4');
+                imageContainer.classList.add('dog', 'image-container');
                 setAttributes(imageContainer, {
                     'data-toggle': 'lightbox',
                     'data-type': 'image',
-                    'data-footer': 'source: <a href="' + imgUrlSource + '">' + imgUrlSource + '</a>',
-                    'href': imgUrl
+                    'data-footer': 'source: <a href="' + imageUrlSource + '">' + imageUrlSource + '</a>',
+                    'href': imageUrl
                 });
-                document.getElementById("gallery").appendChild(imageContainer);
 
                 var image = document.createElement('img');
-                image.setAttribute('src', imgUrl);
-                image.classList.add('img-fluid');
+                setAttributes(image, {
+                    'height': height,
+                    'width': width,
+                    'src': imageUrl
+                });
+                image.classList.add('image');
                 imageContainer.appendChild(image);
+
+                // Add image to gallery
+                gallery.appendChild(imageContainer);
             }
         }
     };
