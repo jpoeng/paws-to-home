@@ -1,8 +1,3 @@
-/**
- * Helper functions
- * 1. setAttribute()
- * 2. getRandomSize()
- */
 function setAttributes(el, attrs) {
     for(var key in attrs) {
         el.setAttribute(key, attrs[key]);
@@ -13,29 +8,6 @@ function getRandomSize(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
-/**
- * Lightbox for Bootstrap
- * Description: Opens images in modal on click
- * Source: http://ashleydw.github.io/lightbox/
- */
-$(document).on('click', '[data-toggle="lightbox"]', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-});
-
-/**
- * Lozad JS
- * Description: lazy loads elements performantly
- * Source: https://github.com/ApoorvSaxena/lozad.js
- */
-const observer = lozad();
-observer.observe();
-
-/**
- * Image Gallery of Adorable Dogs <3
- * 1. Load local json file
- * 2. Build image gallery
- */
 function loadJSON(callback) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -51,8 +23,11 @@ function buildGallery() {
     loadJSON(function(response) {
         var data = JSON.parse(response);
         var dogList = data.dogs;
+        var totalImages = dogList.length;
+        var imagesRemaining = totalImages;
+        var maxImages = 10;
 
-        for (var i = dogList.length - 1; i >= 0; i--) {
+        for (i = 0; i < totalImages; i++) {
             var dog = dogList[i];
             var dogName = dog.name;
             var imageUrl = dog.imageCompressed;
@@ -90,11 +65,49 @@ function buildGallery() {
 
             // Add image to gallery
             document.getElementById('gallery').appendChild(imageContainer);
+
+            // Keep track of images left to display
+            imagesRemaining--;
+
+            // Display 'x' images on the home page
+            if (window.location.pathname == '/' || window.location.pathname == '/index.html') {
+                if (i >= (maxImages - 1)) {
+                    break;
+                }
+            }
         }
 
         // Observe newly added elements for lazy loading
         observer.observe();
+
+        // Add 'view all' cta for remaining images
+        if (imagesRemaining > 0) {
+            var viewAllCta = document.createElement('a');
+            viewAllCta.setAttribute('href', 'fullgallery.html');
+            viewAllCta.classList.add('view-all');
+            viewAllCta.textContent = 'view all';
+            document.getElementById('main').appendChild(viewAllCta);
+        }
     });
 }
 
+/**
+ * Lightbox for Bootstrap
+ * @description Opens images in modal on click
+ * Source: http://ashleydw.github.io/lightbox/
+ */
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
+
+/**
+ * Lozad JS
+ * @description Lazy loads elements performantly
+ * Source: https://github.com/ApoorvSaxena/lozad.js
+ */
+const observer = lozad();
+observer.observe();
+
+// Build adorable dog gallery <3
 buildGallery();
