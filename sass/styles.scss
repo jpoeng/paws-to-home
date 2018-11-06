@@ -126,6 +126,28 @@ a {
     }
 }
 
+/* View All CTA */
+.view-all {
+    background: #666;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    letter-spacing: 2px;
+    margin: 30px auto 60px;
+    max-width: 150px;
+    padding: 8px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.3s linear all;
+
+    &:hover {
+        background: #333;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
 /* Lightbox Modal */
 .modal-content {
     background: none;
