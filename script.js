@@ -1,13 +1,31 @@
+// When the user scrolls down 200px from the top of the document, show the arrow up button
+function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("arrowUpBtn").style.display = "block";
+    } else {
+        document.getElementById("arrowUpBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the arrow up button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+// This function sets element attributes/values
 function setAttributes(el, attrs) {
     for(var key in attrs) {
         el.setAttribute(key, attrs[key]);
     }
 }
 
+// This function returns a random number value
 function getRandomSize(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
+// This function is used to load JSON data
 function loadJSON(callback) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -19,6 +37,7 @@ function loadJSON(callback) {
     xmlhttp.send();
 }
 
+// This function is used to build the image gallery
 function buildGallery() {
     loadJSON(function(response) {
         var data = JSON.parse(response);
@@ -112,20 +131,7 @@ observer.observe();
 // Build adorable dog gallery <3
 buildGallery();
 
-/* Scroll to top */
+// Scroll to top
 window.onscroll = function() {
     scrollFunction();
 };
-// When the user scrolls down 200px from the top of the document, show the arrow up button
-function scrollFunction() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        document.getElementById("arrowUpBtn").style.display = "block";
-    } else {
-        document.getElementById("arrowUpBtn").style.display = "none";
-    }
-}
-// When the user clicks on the arrow up button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}

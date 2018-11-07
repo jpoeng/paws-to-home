@@ -1,4 +1,6 @@
-/* Globals */
+/************************************
+ Globals
+ ************************************/
 :root {
     --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-serif: Georgia, serif;
@@ -18,29 +20,35 @@ a {
     color: var(--color-link);
 }
 
-/* Global Header */
+/************************************
+ Header
+ ************************************/
 .global-header {
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    padding: 32px 20px;
     text-align: center;
 }
 
-/* Header Quote */
 .header-quote {
     color: var(--color);
     font-family: var(--font-serif);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     max-width: 460px;
 }
 
-/* Global Footer */
+/************************************
+ Footer
+ ************************************/
 .global-footer {
     color: var(--color);
+    border-top: 1px solid #eee;
     font-family: var(--font-serif);
+    padding: 16px 20px 0;
     text-align: center;
 }
 
+/************************************
+ Gallery
+ ************************************/
 #gallery {
     margin-bottom: 60px;
 
@@ -128,7 +136,9 @@ a {
     }
 }
 
-/* Lightbox Modal */
+/************************************
+ Modal
+ ************************************/
 .modal-content {
     background: none;
     border: none;
@@ -146,8 +156,8 @@ a {
             color: #fff;
             font-weight: 200;
             position: absolute;
-            right: 30px;
-            top: 20px;
+            right: -10px;
+            top: -10px;
             z-index: 1;
         }
     }
@@ -155,7 +165,9 @@ a {
     .modal-footer {
         border: none;
         color: #fff;
+        letter-spacing: 1px;
         padding: 0 16px;
+        text-transform: uppercase;
     }
 }
 
@@ -166,7 +178,7 @@ a {
 #arrowUpBtn {
     background: none;
     border: none;
-    bottom: 50px;
+    bottom: 80px;
     cursor: pointer;
     display: none;
     padding: 6px 4px 2px;
