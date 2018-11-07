@@ -80,13 +80,13 @@ function buildGallery() {
         // Observe newly added elements for lazy loading
         observer.observe();
 
-        // Add 'view all' cta for remaining images
+        // Add 'view all' button for remaining images
         if (imagesRemaining > 0) {
-            var viewAllCta = document.createElement('a');
-            viewAllCta.setAttribute('href', 'fullgallery.html');
-            viewAllCta.classList.add('view-all');
-            viewAllCta.textContent = 'view all';
-            document.getElementById('main').appendChild(viewAllCta);
+            var viewAllBtn = document.createElement('a');
+            viewAllBtn.setAttribute('href', 'fullgallery.html');
+            viewAllBtn.classList.add('view-all');
+            viewAllBtn.textContent = 'view all';
+            document.getElementById('main').appendChild(viewAllBtn);
         }
     });
 }
@@ -111,3 +111,21 @@ observer.observe();
 
 // Build adorable dog gallery <3
 buildGallery();
+
+/* Scroll to top */
+window.onscroll = function() {
+    scrollFunction();
+};
+// When the user scrolls down 200px from the top of the document, show the arrow up button
+function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("arrowUpBtn").style.display = "block";
+    } else {
+        document.getElementById("arrowUpBtn").style.display = "none";
+    }
+}
+// When the user clicks on the arrow up button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}

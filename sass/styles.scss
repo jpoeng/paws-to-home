@@ -42,6 +42,8 @@ a {
 }
 
 #gallery {
+    margin-bottom: 60px;
+
     .image-container {
         display: block;
         position: relative;
@@ -126,28 +128,6 @@ a {
     }
 }
 
-/* View All CTA */
-.view-all {
-    background: #666;
-    border-radius: 2px;
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    letter-spacing: 2px;
-    margin: 30px auto 60px;
-    max-width: 150px;
-    padding: 8px 20px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.3s linear all;
-
-    &:hover {
-        background: #333;
-        color: #fff;
-        text-decoration: none;
-    }
-}
-
 /* Lightbox Modal */
 .modal-content {
     background: none;
@@ -176,5 +156,63 @@ a {
         border: none;
         color: #fff;
         padding: 0 16px;
+    }
+}
+
+/************************************
+ Buttons
+ ************************************/
+// Arrow Up (Go to Top)
+#arrowUpBtn {
+    background: none;
+    border: none;
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    padding: 6px 4px 2px;
+    position: fixed;
+    right: 30px;
+    transition: 0.3s linear all;
+    z-index: 1;
+
+    &:hover {
+      background-color: #f1f1f1;
+    }
+
+    .arrow-up {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #333;
+        height: 0;
+        margin: 0 auto;
+        width: 0;
+    }
+
+    .text {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+
+// View All
+.view-all {
+    background: #666;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    letter-spacing: 2px;
+    margin: 30px auto 60px;
+    max-width: 150px;
+    padding: 8px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.3s linear all;
+
+    &:hover {
+        background: #333;
+        color: #fff;
+        text-decoration: none;
     }
 }
