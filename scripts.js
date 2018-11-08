@@ -164,7 +164,7 @@ $(document).on('click', '[data-toggle="lightbox"]', function(event) {
  * @description Lazy loads elements performantly
  * Source: https://github.com/ApoorvSaxena/lozad.js
  */
-const observer = lozad();
+var observer = lozad();
 observer.observe();
 
 // Build adorable dog gallery <3
