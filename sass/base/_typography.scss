@@ -1,0 +1,37 @@
+/************************************
+ Typography
+ ************************************/
+*,
+html,
+body {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+body,
+p,
+cite {
+    color: $black-secondary;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a,
+a:link {
+    color: $blue-primary;
+    text-decoration: none;
+    transition: $transition;
+
+    &:hover {
+        color: $blue-primary-hover;
+    }
+}
+
+h1 {
+    color: $black-primary;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 0;
+    margin-bottom: 16px;
+}

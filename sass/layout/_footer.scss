@@ -1,0 +1,22 @@
+/************************************
+ Footer
+ ************************************/
+.global-footer {
+    background: $gray-primary;
+    color: $black-tertiary;
+    text-align: center;
+    padding: 20px;
+
+    a,
+    b,
+    p,
+    span {
+        font-size: 12px;
+        line-height: 1.7em;
+        margin: 0;
+    }
+
+    .vertical-bar {
+        padding: 0 8px;
+    }
+}

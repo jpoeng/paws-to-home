@@ -1,0 +1,22 @@
+/************************************
+ Header
+ ************************************/
+.global-header {
+    background: url(assets/images/assorted-colored-cactus.jpg) center bottom / cover no-repeat;
+    height: 70vh;
+    position: relative;
+
+    .text-container {
+        @include center-content(640px);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        transform: translate(0,-50%);
+        top: 45%;
+
+        .blockquote {
+            @include center-content(400px);
+        }
+    }
+}

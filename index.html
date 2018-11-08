@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Paws to Home</title>
+    <meta name="description" content="Paws to Home is a pet adoption company that places dogs in loving homes. We are based in San Francisco, CA. Contact us today to adopt a pet and discover your new best friend!">
+    <meta name="keywords" content="pet adoption, pets, dogs, dog lovers, pet lovers, man's best friend">
+    <title>Pet Adoption | Dogs | Paws to Home</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -12,35 +13,37 @@
     <!-- Lightbox for Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
 
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
-    <nav class="navbar navbar-light">
-      <a class="navbar-brand" href="/">
-        p &hearts; h
-      </a>
+<body class="full-gallery">
+    <nav class="navbar fixed-top">
+      <a class="navbar-brand" href="/">p &hearts; h</a>
     </nav>
 
     <header class="global-header" role="banner">
-        <h1>Paws to Home</h1>
-        <blockquote class="header-quote">
-            <p>A dog will teach you unconditional love. If you can have that in your life, things won't be too bad.</p>
-
-            <cite>&mdash;Robert Wagner</cite>
-        </blockquote>
+        <div class="text-container text-center">
+            <h1>Discover your best friend and adopt a pet dog today!</h1>
+            <blockquote class="blockquote">
+                <p>A dog will teach you unconditional love. If you can have that in your life, things won't be too bad.</p>
+                <cite>&mdash;Robert Wagner</cite>
+            </blockquote>
+        </div>
     </header>
 
     <main id="main">
         <section id="gallery"></section>
     </main>
 
-    <button onclick="topFunction()" id="arrowUpBtn" title="Go to top">
-        <div class="arrow-up"></div>
-        <div class="text">Top</div>
+    <button onclick="topFunction()" id="scrollUpBtn" title="Go to top">
+        <div class="top">Top</div>
     </button>
 
     <footer class="global-footer">
-        <p>Coded by Jennifer Poeng // See project on <a href="https://github.com/jpoeng/paws-to-home" target="_blank">Github</a></p>
+        <p>Coded by <b>Jennifer Poeng</b><span class="vertical-bar">|</span>See project on <a href="https://github.com/jpoeng/paws-to-home" target="_blank">GitHub</a></p>
+        <p>&copy; 2018 Paws to Home</p>
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

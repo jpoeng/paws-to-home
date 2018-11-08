@@ -1,13 +1,13 @@
-// When the user scrolls down 200px from the top of the document, show the arrow up button
+// When the user scrolls down 200px from the top of the document, show the scroll up button
 function scrollFunction() {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        document.getElementById("arrowUpBtn").style.display = "block";
+        document.getElementById("scrollUpBtn").style.display = "block";
     } else {
-        document.getElementById("arrowUpBtn").style.display = "none";
+        document.getElementById("scrollUpBtn").style.display = "none";
     }
 }
 
-// When the user clicks on the arrow up button, scroll to the top of the document
+// When the user clicks on the scroll up button, scroll to the top of the document
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -46,9 +46,13 @@ function buildGallery() {
         var imagesRemaining = totalImages;
         var maxImages = 10;
 
+        // Build all-images div to collect all images
+        var allImages = document.createElement('div');
+        allImages.classList.add('all-images');
+        document.getElementById('gallery').appendChild(allImages);
+
         for (i = 0; i < totalImages; i++) {
             var dog = dogList[i];
-            var dogName = dog.name;
             var imageUrl = dog.imageCompressed;
 
             // Calculate random image sizes
@@ -61,9 +65,12 @@ function buildGallery() {
             setAttributes(imageContainer, {
                 'data-toggle': 'lightbox',
                 'data-type': 'image',
-                'data-footer': dogName,
                 'href': imageUrl
             });
+
+            var imageContainerInner = document.createElement('div');
+            imageContainerInner.classList.add('inner');
+            imageContainer.appendChild(imageContainerInner);
 
             var image = document.createElement('img');
             setAttributes(image, {
@@ -72,18 +79,46 @@ function buildGallery() {
                 'data-src': imageUrl
             });
             image.classList.add('image', 'lozad');
-            imageContainer.appendChild(image);
+            imageContainerInner.appendChild(image);
 
+            // Text overlay
             var textOverlay = document.createElement('div');
             textOverlay.classList.add('text-container');
-            var text = document.createElement('div');
-            text.classList.add('text');
-            text.textContent = dogName;
-            textOverlay.appendChild(text);
-            imageContainer.appendChild(textOverlay);
+            imageContainerInner.appendChild(textOverlay);
+
+            // Info container
+            var infoContainer = document.createElement('div');
+            infoContainer.classList.add('info-container');
+            textOverlay.appendChild(infoContainer);
+
+            // Row 1 info: name
+            var name = document.createElement('div');
+            name.classList.add('name');
+            name.textContent = dog.name;
+            infoContainer.appendChild(name);
+
+            // Row 2 info: breed, gender, age
+            var wrapper = document.createElement('div');
+            wrapper.classList.add('wrapper');
+            infoContainer.appendChild(wrapper);
+
+            var breed = document.createElement('div');
+            breed.classList.add('breed');
+            breed.textContent = dog.breed;
+            wrapper.appendChild(breed);
+
+            var gender = document.createElement('div');
+            gender.classList.add('gender');
+            gender.textContent = dog.gender;
+            wrapper.appendChild(gender);
+            
+            var age = document.createElement('div');
+            age.classList.add('age');
+            age.textContent = dog.age;
+            wrapper.appendChild(age);
 
             // Add image to gallery
-            document.getElementById('gallery').appendChild(imageContainer);
+            allImages.appendChild(imageContainer);
 
             // Keep track of images left to display
             imagesRemaining--;
@@ -99,13 +134,17 @@ function buildGallery() {
         // Observe newly added elements for lazy loading
         observer.observe();
 
-        // Add 'view all' button for remaining images
+        // Add 'meet all' button for remaining images
         if (imagesRemaining > 0) {
-            var viewAllBtn = document.createElement('a');
-            viewAllBtn.setAttribute('href', 'fullgallery.html');
-            viewAllBtn.classList.add('view-all');
-            viewAllBtn.textContent = 'view all';
-            document.getElementById('main').appendChild(viewAllBtn);
+            var meetAllContainer = document.createElement('div');
+            meetAllContainer.classList.add('btn-container', 'meet-all');
+            document.getElementById('gallery').appendChild(meetAllContainer);
+
+            var meetAllBtn = document.createElement('a');
+            meetAllBtn.setAttribute('href', 'fullgallery.html');
+            meetAllBtn.classList.add('btn');
+            meetAllBtn.textContent = 'Meet all paws';
+            meetAllContainer.appendChild(meetAllBtn);
         }
     });
 }

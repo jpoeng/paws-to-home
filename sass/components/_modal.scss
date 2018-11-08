@@ -1,0 +1,38 @@
+/************************************
+ Modal
+ ************************************/
+.modal-content {
+    background: none;
+    border: none;
+
+    .modal-header {
+        border: none;
+        display: block !important;
+        padding: 0;
+
+        .modal-title {
+            display: none;
+        }
+
+        .close {
+            color: $white;
+            font-weight: 200;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            z-index: 1;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .modal-footer {
+        border: none;
+        color: $white;
+        letter-spacing: 1px;
+        padding: 0 16px;
+        text-transform: uppercase;
+    }
+}

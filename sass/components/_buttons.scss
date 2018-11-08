@@ -1,0 +1,66 @@
+/************************************
+ Buttons
+ ************************************/
+
+// Default
+.btn-container {
+    background: $blue-primary;
+    border-radius: 4px;
+    cursor: pointer;
+    max-width: 150px;
+    padding: 8px 20px;
+    text-align: center;
+    transition: 0.3s linear all;
+
+    .btn {
+        border: none;
+        color: $white;
+        font-weight: 700;
+        padding: 0;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &:hover {
+        background: $blue-primary-hover;
+        text-decoration: none;
+
+        .btn {
+            color: $white;
+        }
+    }
+}
+
+// Scroll Up (Go to Top)
+#scrollUpBtn {
+    background: none;
+    border: none;
+    bottom: 100px;
+    cursor: pointer;
+    display: none;
+    padding: 0;
+    position: fixed;
+    right: 30px;
+    transition: 0.3s linear all;
+    z-index: 1;
+
+    .top {
+        background: $gray-secondary;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 15px 10px;
+        text-transform: uppercase;
+        transition: 0.3s linear all;
+
+        &:hover {
+            color: $blue-primary;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
