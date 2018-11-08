@@ -4,91 +4,136 @@
             "name": "Lassi",
             "imageCompressed": "/assets/images/compressed/1.jpeg",
             "image": "/assets/images/raw/1.jpeg",
-            "source": "https://unsplash.com/photos/ybHtKz5He9Y"
+            "source": "https://unsplash.com/photos/ybHtKz5He9Y",
+            "breed": "Samoyed",
+            "gender": "Female",
+            "age": "5 yrs"
         },
         {
             "name": "Roxy",
             "imageCompressed": "/assets/images/compressed/2.jpeg",
             "image": "/assets/images/raw/2.jpeg",
-            "source": "https://unsplash.com/photos/rY79kwEEyGo"
+            "source": "https://unsplash.com/photos/rY79kwEEyGo",
+            "breed": "Samoyed",
+            "gender": "Male",
+            "age": "3 yrs"
         },
         {
             "name": "Buster",
             "imageCompressed": "/assets/images/compressed/3.jpeg",
             "image": "/assets/images/raw/3.jpeg",
-            "source": "https://unsplash.com/photos/ngqyo2AYYnE"
+            "source": "https://unsplash.com/photos/ngqyo2AYYnE",
+            "breed": "Golden Retriver",
+            "gender": "Male",
+            "age": "5 mos"
         },
         {
-            "name": "Chloe",
+            "name": "Flash",
             "imageCompressed": "/assets/images/compressed/4.jpeg",
             "image": "/assets/images/raw/4.jpeg",
-            "source": "https://unsplash.com/photos/9A64wd1QaAU"
+            "source": "https://unsplash.com/photos/9A64wd1QaAU",
+            "breed": "English Beagle",
+            "gender": "Female",
+            "age": "6 mos"
         },
         {
             "name": "Sadie",
             "imageCompressed": "/assets/images/compressed/5.jpeg",
             "image": "/assets/images/raw/5.jpeg",
-            "source": "https://unsplash.com/photos/915UJQaxtrk"
+            "source": "https://unsplash.com/photos/915UJQaxtrk",
+            "breed": "Samoyed",
+            "gender": "Female",
+            "age": "8 yrs"
         },
         {
             "name": "Ariel",
             "imageCompressed": "/assets/images/compressed/6.jpeg",
             "image": "/assets/images/raw/6.jpeg",
-            "source": "https://unsplash.com/photos/mx0DEnfYxic"
+            "source": "https://unsplash.com/photos/mx0DEnfYxic",
+            "breed": "Border Collie",
+            "gender": "Male",
+            "age": "2 yrs"
         },
         {
-            "name": "Jonah",
+            "name": "Major",
             "imageCompressed": "/assets/images/compressed/7.jpeg",
             "image": "/assets/images/raw/7.jpeg",
-            "source": "https://unsplash.com/photos/OsOQhAzcEKc"
+            "source": "https://unsplash.com/photos/OsOQhAzcEKc",
+            "breed": "German Shepherd",
+            "gender": "Male",
+            "age": "9 yrs"
         },
         {
             "name": "Bella",
             "imageCompressed": "/assets/images/compressed/8.jpeg",
             "image": "/assets/images/raw/8.jpeg",
-            "source": "https://unsplash.com/photos/6WneSv56YVI"
+            "source": "https://unsplash.com/photos/6WneSv56YVI",
+            "breed": "Huskey",
+            "gender": "Female",
+            "age": "4 yrs"
         },
         {
             "name": "Zoey",
             "imageCompressed": "/assets/images/compressed/9.jpeg",
             "image": "/assets/images/raw/9.jpeg",
-            "source": "https://unsplash.com/photos/CdVG9f96kyg"
+            "source": "https://unsplash.com/photos/CdVG9f96kyg",
+            "breed": "Labrador Retriever",
+            "gender": "Female",
+            "age": "3 yrs"
         },
         {
             "name": "Ezra",
             "imageCompressed": "/assets/images/compressed/10.jpeg",
             "image": "/assets/images/raw/10.jpeg",
-            "source": "https://unsplash.com/photos/bVA2DI7c9e8"
+            "source": "https://unsplash.com/photos/bVA2DI7c9e8",
+            "breed": "Schnauzer",
+            "gender": "Male",
+            "age": "3 mos"
         },
         {
             "name": "Stella",
             "imageCompressed": "/assets/images/compressed/11.jpeg",
             "image": "/assets/images/raw/11.jpeg",
-            "source": "https://unsplash.com/photos/GvhSUEN-Lm8"
+            "source": "https://unsplash.com/photos/GvhSUEN-Lm8",
+            "breed": "Bluetick Coonhound",
+            "gender": "Female",
+            "age": "5 yrs"
         },
         {
-            "name": "Major",
+            "name": "Jonah",
             "imageCompressed": "/assets/images/compressed/12.jpeg",
             "image": "/assets/images/raw/12.jpeg",
-            "source": "https://unsplash.com/photos/t2XHKIdc4Kw"
+            "source": "https://unsplash.com/photos/t2XHKIdc4Kw",
+            "breed": "Mix",
+            "gender": "Female",
+            "age": "8 mos"
         },
         {
             "name": "Coco",
             "imageCompressed": "/assets/images/compressed/13.jpeg",
             "image": "/assets/images/raw/13.jpeg",
-            "source": "https://unsplash.com/photos/saRU3vzmgkY"
+            "source": "https://unsplash.com/photos/saRU3vzmgkY",
+            "breed": "English Setter",
+            "gender": "Female",
+            "age": "4 years"
         },
         {
-            "name": "Stormi",
+            "name": "Stormi & Cloudz",
             "imageCompressed": "/assets/images/compressed/14.jpeg",
             "image": "/assets/images/raw/14.jpeg",
-            "source": "https://unsplash.com/photos/1z-kI6gIEpg"
+            "source": "https://unsplash.com/photos/1z-kI6gIEpg",
+            "breed": "Appenzeller Sennenhund",
+            "gender": "Male",
+            "age": "3 yrs"
         },
         {
-            "name": "Flash",
+            "name": "Chloe",
             "imageCompressed": "/assets/images/compressed/15.jpeg",
             "image": "/assets/images/raw/15.jpeg",
-            "source": "https://unsplash.com/photos/zHZ2nTnBnAQ"
+            "source": "https://unsplash.com/photos/zHZ2nTnBnAQ",
+            "breed": "Welsh Corgi",
+            "gender": "Female",
+            "age": "4 yrs"
         }
     ]
 }
