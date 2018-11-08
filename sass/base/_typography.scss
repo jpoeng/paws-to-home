@@ -34,4 +34,8 @@ h1 {
     font-weight: 300;
     letter-spacing: 0;
     margin-bottom: 16px;
+
+    @media (max-width: 768px) {
+        font-size: 35px;
+    }
 }

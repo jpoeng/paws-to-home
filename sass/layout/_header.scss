@@ -15,6 +15,10 @@
         transform: translate(0,-50%);
         top: 45%;
 
+        @media (max-width: 767px) {
+            max-width: 450px;
+        }
+
         .blockquote {
             @include center-content(400px);
         }

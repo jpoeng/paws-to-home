@@ -22,6 +22,10 @@
             top: -10px;
             z-index: 1;
 
+            @media (max-width: 767px) {
+                right: 0;
+            }
+
             &:focus {
                 outline: none;
             }
